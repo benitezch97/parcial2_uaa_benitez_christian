@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'item-detail/:id',
+    loadChildren: () => import('./item-detail/item-detail.module').then(m => m.ItemDetailPageModule)
   },
   {
     path: '',

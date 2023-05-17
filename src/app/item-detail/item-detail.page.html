@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del Objeto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-card *ngIf="item">
+    <img [src]="'http://www.hostcatedral.com/api/publicacion/pub_01.jpg'" alt="Foto del Objeto">
+    <ion-card-header>
+      <ion-card-title>{{ item.Titulo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Descripción: {{ item.Contenido }}</p> 
+      <ion-item>
+        <ion-label>{{ item.Estado }}</ion-label>
+        <ion-label>{{ item.Precio }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
